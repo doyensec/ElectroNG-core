@@ -1,0 +1,2 @@
+let something;
+eval(something);

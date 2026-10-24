@@ -1,0 +1,29 @@
+<html>
+  <head></head>
+  <body>
+    <input type="password" placeholder="password"></input>
+    <input type="text"></input>
+    <br />
+    <button type="button" onclick="enable()">Enable</button>
+    <button type="button" onclick="disable()">Disable</button>
+    <button type="button" onclick="check()">Print `Secure Keyboard Entry` is enabled</button>
+    <br />
+    Status: <span id="status">unknown</span>
+    <script>
+      const { ipcRenderer } = require('electron');
+      const enable = () => {
+        ipcRenderer.send('setSecureKeyboardEntry', true);
+        check();
+      };
+      const disable = () => {
+        ipcRenderer.send('setSecureKeyboardEntry', false);
+        check();
+      };
+      const check = () => {
+        const status = ipcRenderer.sendSync('secureKeyboardEntry');
+        console.log('secureKeyboardEntry = ' + status);
+        document.getElementById('status').innerText = status ? "enabled" : "disabled";
+      };
+    </script>
+  </body>
+</html>

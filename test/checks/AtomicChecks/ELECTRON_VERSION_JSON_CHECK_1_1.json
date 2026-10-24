@@ -1,0 +1,12 @@
+
+{
+    "name": "example_desktop_app",
+    "description": "The latest version available for electron",
+    "main": "app/index.js",
+    "dependencies": {
+      "electron":"4.1.4",
+      "mkdirp": "^0.5.1",
+      "yauzl": "^2.5.0"
+    }
+  }
+  
