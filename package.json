@@ -55,7 +55,7 @@
     "linenumber": "^1.0.1",
     "lodash": "^4.17.21",
     "markdown-escape": "^1.1.0",
-    "marked": "^4.0.17",
+    "marked": "^18.1.1",
     "mocha": "^9.2.2",
     "nedb-async": "^0.1.6",
     "node-xlsx": "^0.16.1",
